@@ -42,6 +42,15 @@ public class AndroidEmulatorTelnet extends Telnet
 		}
 	}
 
+	/**
+	 * Send "geo fix lon lat" command through telnet to be picked up by
+	 * connected emulator
+	 * 
+	 * @param lon
+	 * @param lat
+	 * @return
+	 * @throws IOException
+	 */
 	public TelnetResponse geo(double lon, double lat) throws IOException
 	{
 		if ((lon > 180.0) || (lon < -180.0))

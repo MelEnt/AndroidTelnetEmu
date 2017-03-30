@@ -13,6 +13,13 @@ public class TelnetResponse
 	private ResponseType responseType;
 	private String message = null;
 
+	/**
+	 * Response object returned by the telnet. Used to parse strings and
+	 * intended to be returned when using .communicate() function
+	 * 
+	 * @param in
+	 * @throws IOException
+	 */
 	public TelnetResponse(BufferedReader in) throws IOException
 	{
 		StringBuilder sb = new StringBuilder();
